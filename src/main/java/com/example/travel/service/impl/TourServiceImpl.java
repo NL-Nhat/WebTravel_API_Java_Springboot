@@ -71,7 +71,7 @@ public class TourServiceImpl implements TourService{
         TourEntity tourEntity = tourRepository.findById(id).orElseThrow(() -> new RuntimeException("Không tìm thấy tour có id này"));
 
         TourDetailResponseDTO tourDetailResponseDTO =  tourMapper.toTourDetailResponseDTO(tourEntity);
-        tourDetailResponseDTO.setDestinationName(tourEntity.getDestination().getDestinationName());
+        //tourDetailResponseDTO.setCity(tourEntity.getDestination().getCity());
         
         return tourDetailResponseDTO;
     }

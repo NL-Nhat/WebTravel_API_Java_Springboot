@@ -24,7 +24,7 @@ public interface TourProjection {
 
     BigDecimal getDiemDanhGiaTrungBinh();
     String getMoTa();      
-    String getTenDiemDen();  
+    String getThanhPho();  
     Integer getSoLuongDanhGia(); 
     Integer getSlot();         
     LocalDate getStartDate();   

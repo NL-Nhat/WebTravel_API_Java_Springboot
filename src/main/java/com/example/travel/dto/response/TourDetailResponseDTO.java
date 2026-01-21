@@ -13,7 +13,7 @@ public class TourDetailResponseDTO {
     private Integer id;
     private String tourName;
     private String describe; //mô tả
-    private String destinationName; // tên điểm đến
+    private String city; // thành phố
     private String image;
     private BigDecimal averageRating;
     private Integer numberOfReview;

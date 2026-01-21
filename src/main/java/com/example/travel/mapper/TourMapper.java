@@ -20,7 +20,7 @@ public interface TourMapper {
                 .adultPrice(t.getGiaNguoiLon())
                 .averageRating(t.getDiemDanhGiaTrungBinh())
                 .describe(t.getMoTa())
-                .destination(t.getTenDiemDen())
+                .destination(t.getThanhPho())
                 .numberOfReview(t.getSoLuongDanhGia())
                 .slot(t.getSlot())
                 .startDate(t.getStartDate())
@@ -58,7 +58,7 @@ public interface TourMapper {
     // UserResponse toUserResponse(User user);
 
     //Tự động map qua TourDetailResponseDTO từ TourEntity
-    @Mapping(source = "destination.destinationName", target = "destinationName") 
+    @Mapping(source = "destination.city", target = "city") 
     //map destinationName ở DestinationEntity vì trong TourEntity không có trường destinationName mà nó nằm ở DestinationEntity
     TourDetailResponseDTO toTourDetailResponseDTO(TourEntity tourEntity);
 }
