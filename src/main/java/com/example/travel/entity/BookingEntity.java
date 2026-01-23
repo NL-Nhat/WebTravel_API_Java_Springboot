@@ -1,6 +1,7 @@
 package com.example.travel.entity;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,9 @@ public class BookingEntity {
     @JoinColumn(name = "maLichKhoiHanh")
     private DepartureCheduleEntity departureChedule;
 
+    @Column(name = "maVe", nullable = false)
+    private String idTicket;
+
     @Column(name = "soNguoiLon", nullable = false)
     private Integer adultNumber;
 
@@ -70,9 +74,25 @@ public class BookingEntity {
     @Column(name = "lyDoHuy")
     private String cancelReason;
 
+    @Column(name = "ghiChu")
+    private String note;
+
+    @Column(name = "tenKhachHang", nullable = false)
+    private String nameGuest;
+
+    @Column(name = "ngaySinh")
+    private LocalDate doB;
+
+    @Column(name = "soDienThoai", nullable = false)
+    private String phoneNumber;
+
+    @Column(name = "email", nullable = false)
+    private String email;
+
+    @Column(name = "gioiTinh", columnDefinition = "TINYINT DEFAULT 1")
+    private Integer gender;
+
     @OneToMany(mappedBy = "booking", fetch = FetchType.LAZY)
     private List<PaymentEntity> payments = new ArrayList<PaymentEntity>();
 
-    @OneToMany(mappedBy = "booking", fetch = FetchType.LAZY)
-    private List<ParticipantEntity> participants = new ArrayList<ParticipantEntity>();
 }
