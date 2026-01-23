@@ -14,5 +14,6 @@ public interface DepartureCheduleMapper {
     @Mapping(source = "tour.tourName", target = "tourName")
     @Mapping(source = "tour.image", target = "image")
     @Mapping(source = "tour.destination.city", target = "city")
+    @Mapping(source = "d.id", target = "idDepartureChedule")
     InfoBookingResponseDTO toInfoResponseDTO(DepartureCheduleEntity d);
 }

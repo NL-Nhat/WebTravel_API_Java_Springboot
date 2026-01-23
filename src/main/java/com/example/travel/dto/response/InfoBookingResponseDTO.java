@@ -9,7 +9,7 @@ import lombok.Data;
 @Builder
 public class InfoBookingResponseDTO {
 
-    private Integer id; //idDepartureChedule
+    private Integer idDepartureChedule;
     private String tourName;
     private String city;
     private String image;
